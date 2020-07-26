@@ -37,12 +37,25 @@ addListAfterKeypress = (event) => {
 };
 
 onClickList = (e) => {
-  if (e.target.tagName === "LI") {
-    e.target.classList.toggle("done");
-  } else if (e.target.tagName === "BUTTON") {
-	console.log(e.target);
-	e.target.parentNode.remove();
+  const eventName = e.target.tagName;
+  switch (eventName) {
+    case "LI":
+      onToggleDone(e);
+      break;
+    case "BUTTON":
+      onRemoveParent(e);
+      break;
+    default:
+      break;
   }
+};
+
+onToggleDone = (e) => {
+  e.target.classList.toggle("done");
+};
+
+onRemoveParent = (e) => {
+  e.target.parentNode.remove();
 };
 
 button.addEventListener("click", addListAfterClick);
