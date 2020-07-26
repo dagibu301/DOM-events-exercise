@@ -1,6 +1,16 @@
 const button = document.getElementById("enter");
 const input = document.getElementById("userinput");
 const ul = document.querySelector("ul");
+const liItems = document.getElementsByTagName("li");
+const items = ul.getElementsByTagName("li");
+
+
+for (let i = 0; i < liItems.length; i++) {
+	const button = document.createElement('button');
+	button.innerHTML = 'Delete';
+	liItems[i].appendChild(button);
+
+}
 
 inputLength = ()=> {
 	return input.value.length;
@@ -25,6 +35,15 @@ addListAfterKeypress = (event)=> {
 	}
 }
 
+toggleDone = (e) => {
+	if (e.target.tagName === "LI") {
+        e.target.classList.toggle("done");
+    }
+}
+
+
 button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
+
+ul.addEventListener("click", toggleDone);
