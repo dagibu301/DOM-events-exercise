@@ -16,8 +16,11 @@ inputLength = () => {
 
 createListElement = () => {
   const li = document.createElement("li");
+  const button = document.createElement("button");
+  button.innerHTML = "Delete";
   li.appendChild(document.createTextNode(input.value));
   ul.appendChild(li);
+  li.appendChild(button);
   input.value = "";
 };
 
