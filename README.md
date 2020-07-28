@@ -10,6 +10,12 @@ This project was developed using this technologies:
 
 This is a DOM Events simple exercise consisting in shopping list where you can add and remove items
 
+
+## :star: Live Preview :star:
+
+Go to: [DOM-events-exercise](https://dagibu301.github.io/DOM-events-exercise/)
+
+
 ---
 
 Done with :purple_heart: by David Giraldo :wave:
